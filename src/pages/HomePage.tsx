@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Box, Workflow, Video, Monitor, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 import AboutSection from '../components/AboutSection';
@@ -35,7 +35,6 @@ const HomePage = () => {
           servicesSection.scrollIntoView({ behavior: 'smooth' });
         }, 100);
       }
-      // Clear the state
       window.history.replaceState({}, document.title);
     }
   }, [location.state]);
@@ -121,13 +120,13 @@ const HomePage = () => {
       <SkillsSection />
 
       {/* Featured Work Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-900">
         <div className="section-container">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium text-indigo-600 tracking-wider uppercase">
+            <span className="text-sm font-medium text-indigo-400 tracking-wider uppercase">
               Selected Projects
             </span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-bold">Featured Work</h2>
+            <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white">Featured Work</h2>
           </div>
 
           <motion.div 
@@ -140,7 +139,7 @@ const HomePage = () => {
             {featuredWorks.map((work, index) => (
               <motion.div 
                 key={index}
-                className="card bg-white group"
+                className="bg-gray-800 rounded-xl overflow-hidden shadow-md group border border-gray-700"
                 variants={itemVariants}
               >
                 <div className="relative overflow-hidden">
@@ -156,9 +155,9 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{work.title}</h3>
-                  <p className="text-gray-600 mb-4">{work.description}</p>
-                  <div className="flex items-center text-indigo-600 font-medium">
+                  <h3 className="text-xl font-semibold mb-2 text-white">{work.title}</h3>
+                  <p className="text-gray-300 mb-4">{work.description}</p>
+                  <div className="flex items-center text-indigo-400 font-medium">
                     <Link to="/portfolio" className="flex items-center hover:underline">
                       {t.home.viewWork} <ArrowRight size={16} className="ml-1" />
                     </Link>

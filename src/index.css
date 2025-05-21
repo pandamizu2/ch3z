@@ -18,7 +18,7 @@
   }
   
   .main-gradient {
-    @apply bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 dark:from-indigo-900 dark:via-purple-900 dark:to-blue-900 animate-gradient-shift bg-[length:200%_200%];
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-black dark:via-gray-900 dark:to-black animate-gradient-shift bg-[length:200%_200%];
   }
   
   .section-container {

@@ -29,13 +29,13 @@ const EducationSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-900">
       <div className="section-container">
         <div className="text-center mb-16">
-          <span className="text-sm font-medium text-indigo-600 tracking-wider uppercase">
+          <span className="text-sm font-medium text-indigo-400 tracking-wider uppercase">
             {language === 'en' ? 'Education' : 'Pendidikan'}
           </span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold">
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white">
             {language === 'en' ? 'Academic Background' : 'Latar Belakang Akademik'}
           </h2>
         </div>
@@ -48,7 +48,7 @@ const EducationSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-md overflow-hidden"
+              className="bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700"
             >
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3 relative">
@@ -63,16 +63,16 @@ const EducationSection = () => {
                   </div>
                 </div>
                 <div className="p-6 md:w-2/3 flex flex-col justify-center">
-                  <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
+                  <h3 className="text-xl font-bold mb-2 flex items-center gap-2 text-white">
                     {index === 0 ? (
-                      <GraduationCap className="h-5 w-5 text-indigo-600" />
+                      <GraduationCap className="h-5 w-5 text-indigo-400" />
                     ) : (
-                      <Building2 className="h-5 w-5 text-indigo-600" />
+                      <Building2 className="h-5 w-5 text-indigo-400" />
                     )}
                     {edu.school}
                   </h3>
-                  <p className="text-indigo-600 font-medium mb-3">{edu.degree}</p>
-                  <p className="text-gray-600">{edu.description}</p>
+                  <p className="text-indigo-400 font-medium mb-3">{edu.degree}</p>
+                  <p className="text-gray-300">{edu.description}</p>
                 </div>
               </div>
             </motion.div>
